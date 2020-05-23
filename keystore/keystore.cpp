@@ -44,6 +44,7 @@
 
 #include <keymaster/softkeymaster.h>
 
+#include <algorithm>
 #include <UniquePtr.h>
 #include <utils/String8.h>
 #include <utils/Vector.h>

@@ -23,9 +23,10 @@ LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_SRC_FILES := module.cpp
 LOCAL_C_INCLUDES := \
 	system/security/keystore \
-	external/openssl/include
+	external/openssl/include \
+	external/libcxx/include
 LOCAL_CFLAGS = -fvisibility=hidden -Wall -Werror
-LOCAL_SHARED_LIBRARIES := libcrypto liblog libkeystore_binder libsoftkeymaster
+LOCAL_SHARED_LIBRARIES := libcrypto liblog libkeystore_binder libsoftkeymaster libbinder libcutils libcrypto libhardware libkeystore_binder liblog libutils libselinux
 LOCAL_MODULE_TAGS := optional
 LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 include $(BUILD_SHARED_LIBRARY)
@@ -38,9 +39,10 @@ LOCAL_MODULE := libsoftkeymaster
 LOCAL_SRC_FILES := keymaster_openssl.cpp
 LOCAL_C_INCLUDES := \
 	system/security/keystore \
-	external/openssl/include
+	external/openssl/include \
+	external/libcxx/include
 LOCAL_CFLAGS = -fvisibility=hidden -Wall -Werror
-LOCAL_SHARED_LIBRARIES := libcrypto liblog libkeystore_binder
+LOCAL_SHARED_LIBRARIES := libcrypto liblog libkeystore_binder libbinder libcutils libcrypto libhardware libkeystore_binder liblog libutils libselinux
 LOCAL_MODULE_TAGS := optional
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
 LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk

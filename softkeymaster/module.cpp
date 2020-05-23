@@ -26,6 +26,7 @@
 
 #include <openssl/err.h>
 
+#include <algorithm>
 #include <UniquePtr.h>
 
 // For debugging
